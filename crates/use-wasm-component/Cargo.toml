@@ -1,0 +1,21 @@
+[package]
+name = "use-wasm-component"
+description = "WebAssembly Component Model component, world, interface, package reference, import, and export primitives."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-wasm-component"
+keywords = ["wasm", "component", "wit", "primitive", "rustuse"]
+categories = ["development-tools", "wasm", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

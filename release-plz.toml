@@ -1,0 +1,117 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-wasm-module"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-binary"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-text"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-section"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-import"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-export"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-memory"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-value"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-function"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-target"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-feature"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-component"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm-wit"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasi"
+release = true
+version_group = "rustuse-wasm"
+
+[[package]]
+name = "use-wasm"
+release = true
+version_group = "rustuse-wasm"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+    "use-wasm-module",
+    "use-wasm-binary",
+    "use-wasm-text",
+    "use-wasm-section",
+    "use-wasm-import",
+    "use-wasm-export",
+    "use-wasm-memory",
+    "use-wasm-value",
+    "use-wasm-function",
+    "use-wasm-target",
+    "use-wasm-feature",
+    "use-wasm-component",
+    "use-wasm-wit",
+    "use-wasi",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+    { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+    { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+    { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+    { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+    { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+    { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+    { footer = "^changelog: ?ignore$", skip = true },
+    { message = "^.*", group = "Changed" },
+]

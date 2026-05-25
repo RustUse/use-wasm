@@ -1,0 +1,80 @@
+[package]
+name = "use-wasm"
+description = "Facade crate for RustUse WebAssembly primitive utilities"
+publish = true
+autoexamples = false
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-wasm"
+keywords = ["wasm", "webassembly", "facade", "primitive", "rustuse"]
+categories = ["development-tools", "wasm", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = ["full"]
+module = ["dep:use-wasm-module"]
+binary = ["dep:use-wasm-binary"]
+text = ["dep:use-wasm-text"]
+section = ["dep:use-wasm-section"]
+import = ["dep:use-wasm-import"]
+export = ["dep:use-wasm-export"]
+memory = ["dep:use-wasm-memory"]
+value = ["dep:use-wasm-value"]
+function = ["dep:use-wasm-function"]
+target = ["dep:use-wasm-target"]
+feature = ["dep:use-wasm-feature"]
+component = ["dep:use-wasm-component"]
+wit = ["dep:use-wasm-wit"]
+wasi = ["dep:use-wasi"]
+full = [
+    "module",
+    "binary",
+    "text",
+    "section",
+    "import",
+    "export",
+    "memory",
+    "value",
+    "function",
+    "target",
+    "feature",
+    "component",
+    "wit",
+    "wasi",
+]
+
+[dependencies]
+use-wasm-module = { workspace = true, optional = true }
+use-wasm-binary = { workspace = true, optional = true }
+use-wasm-text = { workspace = true, optional = true }
+use-wasm-section = { workspace = true, optional = true }
+use-wasm-import = { workspace = true, optional = true }
+use-wasm-export = { workspace = true, optional = true }
+use-wasm-memory = { workspace = true, optional = true }
+use-wasm-value = { workspace = true, optional = true }
+use-wasm-function = { workspace = true, optional = true }
+use-wasm-target = { workspace = true, optional = true }
+use-wasm-feature = { workspace = true, optional = true }
+use-wasm-component = { workspace = true, optional = true }
+use-wasm-wit = { workspace = true, optional = true }
+use-wasi = { workspace = true, optional = true }
+
+[[test]]
+name = "facade"
+required-features = ["full"]
+
+[[example]]
+name = "wasm_basic_usage"
+path = "examples/basic_usage.rs"
+required-features = ["full"]
+
+[lints]
+workspace = true

@@ -1,0 +1,89 @@
+[workspace]
+members = [
+    "crates/use-wasm",
+    "crates/use-wasm-module",
+    "crates/use-wasm-binary",
+    "crates/use-wasm-text",
+    "crates/use-wasm-section",
+    "crates/use-wasm-import",
+    "crates/use-wasm-export",
+    "crates/use-wasm-memory",
+    "crates/use-wasm-value",
+    "crates/use-wasm-function",
+    "crates/use-wasm-target",
+    "crates/use-wasm-feature",
+    "crates/use-wasm-component",
+    "crates/use-wasm-wit",
+    "crates/use-wasi",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+documentation = "https://rustuse.org"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-wasm"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-wasm-module = { version = "0.0.1", path = "crates/use-wasm-module" }
+use-wasm-binary = { version = "0.0.1", path = "crates/use-wasm-binary" }
+use-wasm-text = { version = "0.0.1", path = "crates/use-wasm-text" }
+use-wasm-section = { version = "0.0.1", path = "crates/use-wasm-section" }
+use-wasm-import = { version = "0.0.1", path = "crates/use-wasm-import" }
+use-wasm-export = { version = "0.0.1", path = "crates/use-wasm-export" }
+use-wasm-memory = { version = "0.0.1", path = "crates/use-wasm-memory" }
+use-wasm-value = { version = "0.0.1", path = "crates/use-wasm-value" }
+use-wasm-function = { version = "0.0.1", path = "crates/use-wasm-function" }
+use-wasm-target = { version = "0.0.1", path = "crates/use-wasm-target" }
+use-wasm-feature = { version = "0.0.1", path = "crates/use-wasm-feature" }
+use-wasm-component = { version = "0.0.1", path = "crates/use-wasm-component" }
+use-wasm-wit = { version = "0.0.1", path = "crates/use-wasm-wit" }
+use-wasi = { version = "0.0.1", path = "crates/use-wasi" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+doc_markdown = "allow"
+derivable_impls = "allow"
+expect_used = "allow"
+missing_const_for_fn = "allow"
+missing_errors_doc = "allow"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+multiple_crate_versions = "allow"
+return_self_not_must_use = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-wasm-module",
+    "use-wasm-binary",
+    "use-wasm-text",
+    "use-wasm-section",
+    "use-wasm-import",
+    "use-wasm-export",
+    "use-wasm-memory",
+    "use-wasm-value",
+    "use-wasm-function",
+    "use-wasm-target",
+    "use-wasm-feature",
+    "use-wasm-component",
+    "use-wasm-wit",
+    "use-wasi",
+    "use-wasm",
+]

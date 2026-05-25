@@ -1,0 +1,21 @@
+[package]
+name = "use-wasi"
+description = "Pure WASI version, profile, interface, capability label, and permission marker primitives."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-wasi"
+keywords = ["wasi", "wasm", "capability", "primitive", "rustuse"]
+categories = ["development-tools", "wasm", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true

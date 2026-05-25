@@ -1,0 +1,21 @@
+[package]
+name = "use-wasm-wit"
+description = "WIT package, namespace, interface, world, type, function, and resource name primitives."
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-wasm-wit"
+keywords = ["wasm", "wit", "interface", "primitive", "rustuse"]
+categories = ["development-tools", "wasm", "data-structures"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true
